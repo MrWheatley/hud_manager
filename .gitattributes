@@ -4,7 +4,3 @@
 *.rs       text diff=rust
 *.toml     text diff=toml
 Cargo.lock text
-
-# Apply override to all files in the directory
-*.md linguist-detectable
- 
