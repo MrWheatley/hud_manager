@@ -1,0 +1,22 @@
+workspace = { members = ["xtask"] }
+
+[package]
+name = "hud_manager"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.release]
+codegen-units = 1
+strip = true
+lto = true
+panic = "abort"
+opt-level = "z"
+
+[dependencies]
+anyhow = "1.0.79"
+eframe = { version = "0.25.0", default-features = false, features = ["glow", "wayland", "x11" ] }
+nucleo-matcher = "0.3.0"
+open = "5.0.1"
+walkdir = "2.4.0"
